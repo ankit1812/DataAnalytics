@@ -1,0 +1,97 @@
+.dropdown>a{
+    color:white;
+    /* border: 1px solid white */
+    cursor: pointer;
+    border: 1px solid gray;
+    /* padding-top: 5px; */
+    height: 2px;
+    line-height: 0;
+    margin-top: 9px;
+}
+/* .dropdown{
+    border: 1px solid white;
+} */
+
+
+
+input[type=checkbox] {
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    padding: 10px;
+    
+} 
+input[type="checkbox"] {
+    visibility: hidden;
+    transform: scale(2);
+    -ms-transform: scale(2);
+    -webkit-transform: scale(2);
+    padding: 10px;
+  }
+  label {
+    cursor: pointer;
+  }
+  input[type="checkbox"] + label:before {
+    border: 1px solid #333;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 .25em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 16px;
+  }
+  input[type="checkbox"]:checked + label:before {
+    background: rgb(255, 255, 255);
+    color: rgb(18, 149, 231);
+    content: "\2713";
+    text-align: center;
+    font-weight: bold;
+    
+  }
+  input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+    
+  }
+  
+  input[type="checkbox"]:focus + label::before {
+      outline: rgb(59, 153, 252) auto 5px;
+  }
+ /* You can add global styles to this file, and also import other style files */
+ .ngb-dp-arrow-btn {
+    padding: 0 0.25rem;
+    margin: 0 0.5rem;
+    border: none;
+    color: blue ! important;
+    background-color: transparent;
+    z-index: 1;
+}
+.ngb-dp-months {
+    display: -ms-flexbox;
+    display: inline-table;
+    font-size: 14px;
+}
+select{
+    display: flex;
+    display: -ms-flexbox;
+    /* -ms-flex: 1 1 auto; */
+    width: 100%;
+    font-size: 13px! important;
+    padding: 0 0.5rem;
+    font-size: 0.875rem;
+    height: 1.85rem;
+}
+
+.bg-primary {
+    color: white;
+    background-color: #337ab7 ! important;
+}
+.btn-light{
+    width:1.5rem;
+}
+.ngb-dp-day, .ngb-dp-weekday, .ngb-dp-week-number{
+    width: 2.6rem ! important;
+    height: 2rem;
+    margin-left: 0.35rem ! important;
+}

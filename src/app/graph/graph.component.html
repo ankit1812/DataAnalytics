@@ -1,0 +1,117 @@
+<nav class="navbar navbar-inverse" style="border-radius:0; padding:0px">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav">
+        <li class="dropdown" appDropdown>
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button">IOS Prototype <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="cursor: pointer;">Horse Rider </a></li>
+            <li><a style="cursor: pointer;">Plusfour X</a></li>
+            <li><a style="cursor: pointer;">I Love Reading</a></li>
+          </ul>
+        </li>
+                          <li><i class="fa fa-star" style="color:yellow; margin-left: 20px;
+                margin-top: 20px;"></i>
+                <i class="fa fa-star" style="color:yellow; margin-left: 8px;
+                  margin-top: 20px;"></i>
+                  <i class="fa fa-star" style="color:white; margin-left: 8px;
+                    margin-top: 20px;"></i>
+                    <i class="fa fa-star" style="color:white; margin-left: 8px;
+                      margin-top: 20px;"></i>
+                      <i class="fa fa-star" style="color:white; margin-left: 8px;
+                        margin-top: 20px;"></i></li>
+       
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+       <li> 
+          <form class="navbar-form navbar-left" >
+              <div class="input-group">
+                  
+                <input id="dropper-default" readonly placeholder="yyyy-mm-dd" class="form-control" ngbDatepicker (click)="datePicker.toggle()" #d="ngbDatepicker" type="text"  />
+                <span class="input-group-addon" (click)="d.toggle()"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                    </div>
+          </form>
+          </li>
+        <li> 
+        <a href="#"><i class="fa fa-sign-out" style="color:white; 
+            margin-top: 4px; font-size:20px"></i></a>
+          </li>
+         
+        </ul>
+    </div>
+  </nav>
+ 
+ <div class="container">
+ <div class="row">
+   <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div style="display: block; ">
+      <canvas baseChart width="833px" height="400px"
+                  [datasets]="lineChartData"
+                  [labels]="lineChartLabels"
+                  [options]="chartOptions"
+                  [colors]="lineChartColors"
+                  [legend]="lineChartLegend"
+                  [chartType]="lineChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)"></canvas>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+    
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+
+        <form>
+            <!-- <label class="checkbox-inline">
+              <input type="checkbox" class="custom-control-input" name="optradio"><b style="color:grey">Milestones</b> &nbsp;&nbsp; &nbsp;
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="task" name="optradio"><b style="color:grey">Tasks</b>  &nbsp; &nbsp; &nbsp;
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" name="optradio"><b style="color:grey">Delivery Date</b> &nbsp; &nbsp; &nbsp;
+            </label> -->
+            <input type="checkbox"  id="milestones" name="cb">
+<label for="milestones">Milestones</label>
+<input type="checkbox"  id="task" name="cb" style="font-size:24px">
+<label for="task">Tasks</label>
+<input type="checkbox"  id="delivery_date" name="cb">
+<label for="delivery_date">Delivery Date</label>
+           
+          </form>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <p style="float:right;  color:black"><b>Project Manager : Niharika Yadav</b></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+    <!-- <input class="form-control" placeholder="yyyy-mm-dd"
+    name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" style="display:none">
+  <div class="input-group-append">
+  <button class="btn btn-outline-secondary" (click)="d.toggle()" type="button"> -->
+  <!-- <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/> -->
+  
+  

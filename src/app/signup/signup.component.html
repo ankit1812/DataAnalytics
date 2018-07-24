@@ -1,0 +1,71 @@
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12"  style="padding:0px;">
+            <img src="assets/bg.jpg" class="main-bg" alt="Background"  width="100%" >
+      </div>
+    </div>
+    
+    
+    
+
+
+<div class="login" style=" position: absolute;left: 50%;top: 50%; transform: translate(-50%,-50%);">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="assets/logo.png" class="img-responsive" style="display:block; margin:auto">
+      </div>
+    </div>
+  <div class="card grad">
+       
+ <div class="card-body">
+          <div class="login-outside-style text-center"style="height: auto">
+              <div class="card-header card-header-font-size text-center">
+                  <h3><b>Sign up to Your Account</b></h3>
+                  <p style="visibility:hidden">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</p>
+                </div>
+              <form #f="ngForm" (ngSubmit)="signup(f)">
+                  <div class="form-group" [class.has-error]="name.invalid && name.touched">
+                      <input type="text" class="form-control" name="username" placeholder="Your Username " required maxlength="15" [(ngModel)]="username" #name="ngModel" required>
+                      </div>
+                      <span class="help-block" *ngIf="name.invalid && name.touched">Username is required</span>
+                      
+                     
+                    <div class="form-group" [class.has-error]="mail.invalid && mail.touched">
+                      <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Your Email Address" #mail="ngModel" required maxlength="32" email >
+                      
+                    </div>
+                    <span class="help-block" *ngIf="mail.errors?.required && mail.touched">Email is required</span>
+                    <span class="help-block" *ngIf="mail.errors?.email && mail.touched">Email is invalid</span>
+                    <div class="form-group"  [class.has-error]="pass.invalid && pass.touched">
+                      <input type="password" class="form-control" name="password" required placeholder="Password" [(ngModel)]="password" #pass="ngModel" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$">
+                      
+                    </div>
+                    <span class="help-block" *ngIf="pass.errors?.required && pass.touched">Password is required</span>
+                    <span class="help-block" *ngIf="pass.errors?.pattern &&  pass.touched">Password Must contain at least 8 charcters,one uppercase letter, one lowercase letter and one number</span>
+                    <div class="form-group"  [class.has-error]="mobile.invalid && mobile.touched">
+                        <input type="text" class="form-control" name="phone" placeholder="Your Mobile Number" required minlength="10" maxlength="10" [(ngModel)]="phone" #mobile="ngModel" >
+                   </div>
+                   <span class="help-block" *ngIf="mobile.errors?.required && mobile.touched">Phone number is required</span>
+                   <span class="help-block" *ngIf="mobile.errors?.minlength && mobile.touched">Phone number Must be of 10 digits</span>
+                    
+                    <div class="row m-t-30">
+                      <div class="col-md-12">
+                        <button  type="submit" [disabled]="!f.valid" class="btn btn-bg-color btn-md btn-block waves-effect text-center m-b-20" ><b>SIGN UP</b></button>
+                      </div>
+                    </div>
+                </form>
+               
+          </div>
+          
+       </div>
+       <!-- <div class="login-card-footer text-center">Don't have an account ?<span class="text-danger">&nbsp;Sing up</span></div> -->
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
